@@ -17,8 +17,11 @@
     "prebuild": "npm run typecheck"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.0.0-rc.0",
     "babel-plugin-styled-components": "^1.13.2",
+    "clsx": "^1.1.1",
     "gatsby": "^3.11.1",
     "gatsby-plugin-gatsby-cloud": "^2.11.0",
     "gatsby-plugin-styled-components": "^4.11.0",

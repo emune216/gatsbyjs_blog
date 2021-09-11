@@ -12,6 +12,6 @@ const Nav = () => {
 export default Nav;
 
 const Wrapper = styled.div`
-  background-color: ${(p) => p.theme.color};
-  height: 10rem;
+  background-color: ${(p) => p.theme.color.nav};
+  transition: ${(p) => p.theme.transition.default};
 `;

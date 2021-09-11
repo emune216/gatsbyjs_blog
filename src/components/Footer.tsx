@@ -11,4 +11,7 @@ const Footer = () => {
 
 export default Footer;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  background-color: ${(p) => p.theme.color.footer};
+  transition: ${(p) => p.theme.transition.default};
+`;
