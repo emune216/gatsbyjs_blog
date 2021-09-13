@@ -12,16 +12,16 @@ declare module 'styled-components' {
       blue: string;
       softBlue: string;
       deepBlue: string;
-      
+
       yellow: string;
       deepYellow: string;
-  
+
       indigo: string;
       softIndigo: string;
       deepIndigo: string;
-  
+
       gray: string;
-  
+
       white: string;
     },
 

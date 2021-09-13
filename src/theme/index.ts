@@ -17,7 +17,7 @@ const theme = {
     blue: '#96dcee',
     softBlue: '#C2E9F6',
     deepBlue: '#72cce3',
-    
+
     yellow: '#fffaa8',
     deepYellow: '#f5eb71',
 

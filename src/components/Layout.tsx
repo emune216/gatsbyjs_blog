@@ -24,31 +24,44 @@ const Layout = ({ children }: Props) => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Nav />
-        <Main>
-          <SwitchWrapper>
-            <DarkModeSwitch
-              darkMode={darkMode}
-              onChange={darkModeChange}
-            />
-          </SwitchWrapper>
-          {children}
-        </Main>
-        <Footer />
+        <Wrapper>
+          <Nav />
+          <Main>
+            <SwitchWrapper>
+              <DarkModeSwitch
+                darkMode={darkMode}
+                onChange={darkModeChange}
+              />
+            </SwitchWrapper>
+            <MainContent>
+              {children}
+            </MainContent>
+          </Main>
+          <Footer />
+        </Wrapper>
       </ThemeProvider>
     </>
   );
 };
 
 export default Layout;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+`;
 const Main = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 900px;
-  border: 1px solid black;
+`;
+const MainContent = styled.div`
+  padding: 20px;
 `;
 const SwitchWrapper = styled.div`
   display: flex;
-  justify-content: right;
-  background-color: inherit;
+  justify-content: flex-end;
 `;

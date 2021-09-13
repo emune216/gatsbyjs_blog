@@ -7,7 +7,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <Content>
-        hello blog
+        <div style={{ border: '1px solid black' }}>
+          blog
+        </div>
       </Content>
     </Layout>
   );
