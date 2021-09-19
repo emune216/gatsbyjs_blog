@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Nav = () => {
   return (
     <Wrapper>
-      Nav
+      yuns blog
     </Wrapper>
   );
 };
@@ -17,4 +17,7 @@ const Wrapper = styled.div`
   height: 3rem;
 
   transition: ${(p) => p.theme.transition.default};
+
+  width: 100%;
+  font-size: 2rem;
 `;

@@ -23,8 +23,8 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Wrapper>
+        <App>
+          <GlobalStyle />
           <Nav />
           <Main>
             <SwitchWrapper>
@@ -33,12 +33,10 @@ const Layout = ({ children }: Props) => {
                 onChange={darkModeChange}
               />
             </SwitchWrapper>
-            <MainContent>
-              {children}
-            </MainContent>
+            {children}
           </Main>
           <Footer />
-        </Wrapper>
+        </App>
       </ThemeProvider>
     </>
   );
@@ -46,22 +44,20 @@ const Layout = ({ children }: Props) => {
 
 export default Layout;
 
-const Wrapper = styled.div`
+const App = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 300px;
+  width: 100%;
+  min-width: 350px;
 `;
 const Main = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: 900px;
-`;
-const MainContent = styled.div`
-  padding: 20px;
 `;
 const SwitchWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  background-color: inherit;
+  width: 100%;
 `;

@@ -12,6 +12,10 @@
     "esModuleInterop": true,
     "allowJs": true
   },
-  "include": ["./src/**/*"],
+  "include": [
+    "./src/**/*",
+    "./src/assets/icon/svgs/svg.d.ts",
+    "./src/theme/styled.d.ts",
+  ],
   "exclude": ["node_modules", "public", ".cache"]
 }
