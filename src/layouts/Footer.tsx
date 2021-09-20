@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { github_logo, instagram_logo, feed } from '../assets/icon/svgs';
-import SocialButton from './parts/SocialButton';
+import SocialButton from '../components/SocialButton';
 
 const Footer = () => {
   return (
@@ -28,7 +28,7 @@ const Footer = () => {
 export default Footer;
 
 const Wrapper = styled.div`
-  transition: ${(p) => p.theme.transition.default};
+  transition: ${(p) => `all ${p.theme.transition.default}`};
   display: flex;
   justify-content: center;
   width: 100%;

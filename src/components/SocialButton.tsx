@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 interface Props {
   icon: string;
-  onClick?: () => void
-};
+  onClick?: () => void;
+}
 
 const SocialButton = ({ icon, onClick }: Props) => {
   return (

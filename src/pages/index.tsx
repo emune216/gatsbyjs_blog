@@ -1,20 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Layout from '../components/Layout';
+import ArticlePreview from '../components/ArticlePreview';
 
-const IndexPage = () => {
+const articleList = [
+  {
+    title: '테스트용',
+    desc: '테스트용 블로그글 입니당.'
+  },
+  {
+    title: '테스트용2',
+    desc: '테스트용2 블로그글 입니당.'
+  },
+  {
+    title: '테스트용3',
+    desc: '테스트용3 블로그글 입니당.'
+  },
+];
+
+const HomePage = () => {
   return (
-    <Layout>
-      <Content>
-        <div style={{ border: '1px solid black' }}>
-          blog
-        </div>
-      </Content>
-    </Layout>
+    <Content>
+      {articleList.map((article, idx) => (
+        <ArticlePreview
+          key={article.title + idx}
+          title={article.title}
+          desc={article.desc}
+        />
+      ))}
+    </Content>
   );
 };
 
-export default IndexPage;
+export default HomePage;
 
 const Content = styled.div``;

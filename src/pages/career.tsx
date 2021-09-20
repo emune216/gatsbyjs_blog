@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const AboutPage = () => {
+const CareerPage = () => {
   return (
     <Content>
-      <p>About</p>
+      <h1>Career Page</h1>
     </Content>
   );
 };
 
-export default AboutPage;
+export default CareerPage;
 
 const Content = styled.div``;

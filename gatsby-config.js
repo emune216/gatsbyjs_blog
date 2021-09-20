@@ -8,5 +8,6 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-typescript",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-layout",
   ],
 };

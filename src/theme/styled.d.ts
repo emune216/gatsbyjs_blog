@@ -29,6 +29,18 @@ declare module 'styled-components' {
       md: string;
     },
 
+    size: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+
+      smN: number;
+      mdN: number;
+      lgN: number;
+      xlN: number;
+    }
+
     transition: {
       default: string;
       fast: string;
