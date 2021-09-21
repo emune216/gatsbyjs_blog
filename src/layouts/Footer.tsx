@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import { github_logo, instagram_logo } from '../assets/icon/svgs';
-import SocialButton from '../components/SocialButton';
+import { Facebook, Instagram } from '@mui/icons-material';
 
 const Footer = () => {
   return (
@@ -10,12 +8,12 @@ const Footer = () => {
       <FooterContainer>
         <span>copyright © yunsu</span>
         <SocialButtonContainer>
-          <ButtonWrapper>
-            <SocialButton icon={github_logo} />
-          </ButtonWrapper>
-          <ButtonWrapper>
-            <SocialButton icon={instagram_logo} />
-          </ButtonWrapper>
+          <SocialButton>
+            <Facebook />
+          </SocialButton>
+          <SocialButton>
+            <Instagram />
+          </SocialButton>
         </SocialButtonContainer>
       </FooterContainer>
     </Wrapper>
@@ -37,6 +35,6 @@ const FooterContainer = styled.div`
 const SocialButtonContainer = styled.div`
   display: flex;
 `;
-const ButtonWrapper = styled.div`
-  margin-left: 0.4rem;
+const SocialButton = styled.div`
+  margin-left: 0.5rem;
 `;

@@ -10,8 +10,8 @@ export const dark = {
   writing: '#FFFFFF',
   writingHover: '#16C79A',
   mainBg: '#0E141B',
-  navIcon: '#56646e',
-  navIconHover: '#000000',
+  navIcon: '#979B9E',
+  navIconHover: '#FFFFFF',
 };
 
 const theme = {

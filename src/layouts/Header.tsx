@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { WbSunnyRounded, NightsStayRounded, RssFeedRounded, Search, MenuRounded } from '@mui/icons-material';
 
-import { sun, moon, feed } from '../assets/icon/svgs';
 import sudal from '../assets/image/sudal.png';
 
 interface Props {
@@ -25,16 +25,20 @@ const Header = ({ isDarkMode, handleDarkMode }: Props) => {
       </div>
       <div className='right'>
         <OptionContainer>
+          <OptionButton>
+            <Search className='header-icon' />
+          </OptionButton>
           <OptionButton onClick={() => handleDarkMode(!isDarkMode)}>
             {isDarkMode
-              ? <img src={moon} alt='Active light mode' />
-              : <img src={sun} alt='Active dark mode' />
+              ? <NightsStayRounded className='header-icon' />
+              : <WbSunnyRounded className='header-icon' />
             }
           </OptionButton>
           <OptionButton>
-            <img src={feed} className='feed' alt='RSS Feed' />
+            <RssFeedRounded className='header-icon' />
           </OptionButton>
         </OptionContainer>
+        <MenuRounded className='header-icon' fontSize='large' />
       </div>
     </Wrapper>
   );
@@ -55,6 +59,14 @@ const Wrapper = styled.div`
   .right {
     display: flex;
     align-items: center;
+  }
+  .header-icon {
+    color: ${(p) => p.theme.color.navIcon};
+    cursor: pointer;
+
+    &:hover {
+      color: ${(p) => p.theme.color.navIconHover};
+    }
   }
 `;
 const BlogLogoContainer = styled.div`
@@ -79,10 +91,6 @@ const Nav = styled.div`
 const OptionContainer = styled.div`
   display: flex;
   align-items: center;
-
-  img {
-    width: ${(p) => `${p.theme.size.navOptionBtn}px`};
-  }
 `;
 const OptionButton = styled.div`
   display: flex;
@@ -91,5 +99,4 @@ const OptionButton = styled.div`
   margin-left: 1rem;
   width: ${(p) => `${p.theme.size.navOptionBtn}px`};
   height: ${(p) => `${p.theme.size.navOptionBtn}px`};
-  cursor: pointer;
 `;
