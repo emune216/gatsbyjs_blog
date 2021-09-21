@@ -1,35 +1,24 @@
 export const light = {
-  nav: '#72cce3',
-  main: '#C2E9F6',
-  footer: '#96dcee',
+  writing: '#000000',
+  writingHover: '#16C79A',
+  mainBg: '#FFFFFF',
+  navIcon: '#56646e',
+  navIconHover: '#000000',
 };
 
 export const dark = {
-  nav: '#5d6baa',
-  main: '#808fc7',
-  footer: '#a3a5c3',
+  writing: '#FFFFFF',
+  writingHover: '#16C79A',
+  mainBg: '#0E141B',
+  navIcon: '#56646e',
+  navIconHover: '#000000',
 };
-
-const font = {
-  md: '12rem',
-}
-
-const size = {
-  sm: '4rem',
-  md: '6rem',
-  lg: '8rem',
-  xl: '10rem',
-
-  smN: 10,
-  mdN: 60,
-  lgN: 100,
-  xlN: 200,
-}
 
 const theme = {
   color: light,
 
   baseColor: {
+    black: '#000000',
     blue: '#96dcee',
     softBlue: '#C2E9F6',
     deepBlue: '#72cce3',
@@ -46,8 +35,19 @@ const theme = {
     white: '#fff',
   },
 
-  font,
-  size,
+  size: {
+    sm: '4rem',
+    md: '6rem',
+    lg: '8rem',
+    xl: '10rem',
+
+    smN: 10,
+    mdN: 60,
+    lgN: 100,
+    xlN: 200,
+
+    navOptionBtn: 24, // px
+  },
 
   transition: {
     default: '.2s ease-in',

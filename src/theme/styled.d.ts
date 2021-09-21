@@ -3,12 +3,15 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     color: {
-      nav: string;
-      main: string;
-      footer: string;
+      writing: string;
+      writingHover: string;
+      mainBg: string;
+      navIcon: string;
+      navIconHover: string;
     },
 
     baseColor: {
+      black: string;
       blue: string;
       softBlue: string;
       deepBlue: string;
@@ -34,6 +37,8 @@ declare module 'styled-components' {
       md: string;
       lg: string;
       xl: string;
+
+      navOptionBtn: number;
 
       smN: number;
       mdN: number;

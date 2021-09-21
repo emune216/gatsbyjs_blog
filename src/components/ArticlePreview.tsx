@@ -18,8 +18,8 @@ const ArticlePreview = ({ title, desc }: Props) => {
 export default ArticlePreview;
 
 const Wrapper = styled.div`
-  background-color: ${(p) => p.theme.baseColor.deepBlue};
-  padding: 0.5rem;
+  padding: 10rem 0.5rem;
+  border: 1px solid black;
 `;
 const Title = styled.h1``;
 const Desc = styled.p``;

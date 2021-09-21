@@ -4,5 +4,15 @@ import reset from 'styled-reset';
 export const GlobalStyle = createGlobalStyle`
   ${reset};
 
-  background-color: black;
+  body {
+    font-family: 'Nanum Gothic';
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  div {
+    box-sizing: border-box;
+  }
 `;

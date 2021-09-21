@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { github_logo, instagram_logo, feed } from '../assets/icon/svgs';
+import { github_logo, instagram_logo } from '../assets/icon/svgs';
 import SocialButton from '../components/SocialButton';
 
 const Footer = () => {
@@ -16,9 +16,6 @@ const Footer = () => {
           <ButtonWrapper>
             <SocialButton icon={instagram_logo} />
           </ButtonWrapper>
-          <ButtonWrapper>
-            <SocialButton icon={feed} />
-          </ButtonWrapper>
         </SocialButtonContainer>
       </FooterContainer>
     </Wrapper>
@@ -28,7 +25,6 @@ const Footer = () => {
 export default Footer;
 
 const Wrapper = styled.div`
-  transition: ${(p) => `all ${p.theme.transition.default}`};
   display: flex;
   justify-content: center;
   width: 100%;
