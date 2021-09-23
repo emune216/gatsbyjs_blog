@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import _ from 'lodash';
 import { WbSunnyRounded, NightsStayRounded, RssFeedRounded, Search, MenuRounded } from '@mui/icons-material';
 
 import sudal from '../assets/image/sudal.png';
@@ -50,7 +51,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 2rem;
+  padding: 1rem 2rem;
+
+  background-color: ${(p) => p.theme.color.mainBg};
+  transition: ${(p) => `all ${p.theme.transition.default}`};
 
   .left {
     display: flex;

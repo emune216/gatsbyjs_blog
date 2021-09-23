@@ -51,7 +51,7 @@ const theme = {
 
   transition: {
     default: '.2s ease-in',
-    fast: 'all 100ms ease-in',
+    fast: 'all 100ms ease-in-out',
     animationDuration: '350ms',
   },
 };
