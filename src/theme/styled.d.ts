@@ -1,4 +1,6 @@
-import 'styled-components';
+import { CSSProp } from 'styled-components';
+
+type BackQuoteArgs = string[];
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -44,7 +46,13 @@ declare module 'styled-components' {
       mdN: number;
       lgN: number;
       xlN: number;
-    }
+    },
+
+    media: {
+      mobile: (literals: TemplateStringsArray, ...args: BackQuoteArgs)  => CSSProp,
+      tablet: (literals: TemplateStringsArray, ...args: BackQuoteArgs)  => CSSProp,
+      desktop: (literals: TemplateStringsArray, ...args: BackQuoteArgs)  => CSSProp,
+    },
 
     transition: {
       default: string;

@@ -5,6 +5,7 @@ import useDarkMode from '../hooks/useDarkMode';
 import useScroll from '../hooks/useScroll';
 import Header from './Header';
 import Footer from './Footer';
+import MaxWidthWrapper from '../components/MaxWidthWrapper';
 
 const Layout: React.FC = ({ children }) => {
   const { isDarkMode, handleDarkMode } = useDarkMode();
@@ -19,11 +20,13 @@ const Layout: React.FC = ({ children }) => {
           handleDarkMode={handleDarkMode}
         />
       </StickyContainer>
-      <Main>
-        <MainContent>
-          {children}
-        </MainContent>
-      </Main>
+      <MaxWidthWrapper>
+        <Main>
+          <MainContent>
+            {children}
+          </MainContent>
+        </Main>
+      </MaxWidthWrapper>
       <Footer />
     </App>
   );

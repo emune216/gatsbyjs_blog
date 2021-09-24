@@ -1,3 +1,5 @@
+import media from '../style/media';
+
 export const light = {
   writing: '#000000',
   writingHover: '#16C79A',
@@ -48,6 +50,8 @@ const theme = {
 
     navOptionBtn: 24, // px
   },
+
+  media,
 
   transition: {
     default: '.2s ease-in',
