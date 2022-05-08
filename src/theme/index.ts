@@ -37,6 +37,10 @@ const theme = {
     white: '#fff',
   },
 
+  font: {
+    md: ''
+  },
+
   size: {
     sm: '4rem',
     md: '6rem',

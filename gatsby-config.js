@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "My Gatsby Site",
+    title: "Yunsu Gatsby Blog",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -10,12 +10,14 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-layout",
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
-          `Nanum+Gothic \:400,700,800`,
-        ],
-        display: 'swap',
+          {
+            family: 'Nanum Gothic',
+            weights: ['400','700','800']
+          }
+        ]
       }
     },
   ],

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import _ from 'lodash';
 import { WbSunnyRounded, NightsStayRounded, RssFeedRounded, Search, MenuRounded } from '@mui/icons-material';
 
 import sudal from '../assets/image/sudal.png';

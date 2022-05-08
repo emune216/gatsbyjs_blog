@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import useDarkMode from '../hooks/useDarkMode';
@@ -7,7 +7,7 @@ import Header from './Header';
 import Footer from './Footer';
 import MaxWidthWrapper from '../components/MaxWidthWrapper';
 
-const Layout: React.FC = ({ children }) => {
+const Layout: FC = ({ children }) => {
   const { isDarkMode, handleDarkMode } = useDarkMode();
   const { scrollY } = useScroll();
 

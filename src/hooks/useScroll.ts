@@ -1,14 +1,14 @@
-import React from 'react';
+import { useState, useEffect} from 'react';
 import _ from 'lodash';
 
 const useScroll = () => {
-  const [scrollY, SetScrollY] = React.useState(0);
+  const [scrollY, SetScrollY] = useState(0);
 
   const handleScroll = () => {
     SetScrollY(window.scrollY);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', _.throttle(handleScroll, 200));
   }, []);
 
