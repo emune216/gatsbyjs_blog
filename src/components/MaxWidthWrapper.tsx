@@ -1,16 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
 interface Props {
   children: React.ReactNode;
 }
 
-const MaxWidthWrapper = ({ children }: Props) => {
-  return (
-    <Wrapper>
-      {children}
-    </Wrapper>
-  );
+const MaxWidthWrapper: FC<Props> = ({ children }: Props) => {
+  return <Wrapper>{children}</Wrapper>;
 };
 
 export default MaxWidthWrapper;

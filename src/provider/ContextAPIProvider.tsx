@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { FC, useState } from "react";
 
-import DarkThemeContext from './ThemeContext';
+import DarkThemeContext from "./ThemeContext";
 
-const ContextAPIProvider: React.FC = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = React.useState<boolean>(false);
+const ContextAPIProvider: FC = ({ children }) => {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   const handleDarkMode = (val: boolean) => {
     if (typeof window !== undefined) {
-      localStorage.setItem('prefers-darkmode', JSON.stringify(val));
+      localStorage.setItem("prefers-darkmode", JSON.stringify(val));
     }
     setIsDarkMode(val);
   };
@@ -21,7 +21,7 @@ const ContextAPIProvider: React.FC = ({ children }) => {
     >
       {children}
     </DarkThemeContext.Provider>
-  )
+  );
 };
 
 export default ContextAPIProvider;

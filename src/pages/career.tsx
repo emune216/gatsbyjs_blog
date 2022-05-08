@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
-const CareerPage = () => {
+const CareerPage: FC = () => {
   return (
     <Content>
       <h1>Career Page</h1>

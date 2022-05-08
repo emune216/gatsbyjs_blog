@@ -14,11 +14,11 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: 'Nanum Gothic',
-            weights: ['400','700','800']
-          }
-        ]
-      }
+            family: "Nanum Gothic",
+            weights: ["400", "700", "800"],
+          },
+        ],
+      },
     },
   ],
 };

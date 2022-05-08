@@ -2,20 +2,18 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: true,
   },
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   extends: [
-    'eslint:recommended',
-    'react-app',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'prettier/react',
+    "eslint:recommended",
+    "react-app",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
   ],
   settings: {
     react: {
-      version: 'detact',
+      version: "detect",
     },
   },
   env: {
@@ -23,16 +21,28 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugin: ['@typescript/eslint', 'prettier', 'react'],
+  plugins: ["@typescript-eslint/eslint-plugin", "prettier", "react"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: '2018',
-    sourceType: 'module',
+    ecmaVersion: "2020",
+    sourceType: "module",
   },
   rules: {
-    'react/prop-types': 'off',
+    "react/prop-types": "off",
+    eqeqeq: ["error", "always"],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
   },
-  overrides: [],
+  overrides: [
+    {
+      // enable the rule specifically for TypeScript files
+      files: ["*.ts", "*.tsx"],
+      rules: {
+        "@typescript-eslint/explicit-module-boundary-types": ["error"],
+      },
+    },
+  ],
 };

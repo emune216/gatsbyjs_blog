@@ -1,8 +1,8 @@
-import { CSSProp } from 'styled-components';
+import { CSSProp } from "styled-components";
 
 type BackQuoteArgs = string[];
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
     color: {
       writing: string;
@@ -10,7 +10,7 @@ declare module 'styled-components' {
       mainBg: string;
       navIcon: string;
       navIconHover: string;
-    },
+    };
 
     baseColor: {
       black: string;
@@ -28,11 +28,11 @@ declare module 'styled-components' {
       gray: string;
 
       white: string;
-    },
+    };
 
     font: {
       md: string;
-    },
+    };
 
     size: {
       sm: string;
@@ -46,18 +46,27 @@ declare module 'styled-components' {
       mdN: number;
       lgN: number;
       xlN: number;
-    },
+    };
 
     media: {
-      mobile: (literals: TemplateStringsArray, ...args: BackQuoteArgs)  => CSSProp,
-      tablet: (literals: TemplateStringsArray, ...args: BackQuoteArgs)  => CSSProp,
-      desktop: (literals: TemplateStringsArray, ...args: BackQuoteArgs)  => CSSProp,
-    },
+      mobile: (
+        literals: TemplateStringsArray,
+        ...args: BackQuoteArgs
+      ) => CSSProp;
+      tablet: (
+        literals: TemplateStringsArray,
+        ...args: BackQuoteArgs
+      ) => CSSProp;
+      desktop: (
+        literals: TemplateStringsArray,
+        ...args: BackQuoteArgs
+      ) => CSSProp;
+    };
 
     transition: {
       default: string;
       fast: string;
       animationDuration: string;
-    },
+    };
   }
 }

@@ -1,44 +1,53 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { WbSunnyRounded, NightsStayRounded, RssFeedRounded, Search, MenuRounded } from '@mui/icons-material';
+import React, { FC } from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
+import {
+  WbSunnyRounded,
+  NightsStayRounded,
+  RssFeedRounded,
+  Search,
+  MenuRounded,
+} from "@mui/icons-material";
 
-import sudal from '../assets/image/sudal.png';
+import sudal from "../assets/image/sudal.png";
 
 interface Props {
   isDarkMode: boolean;
   handleDarkMode: (val: boolean) => void;
 }
 
-const Header = ({ isDarkMode, handleDarkMode }: Props) => {
+const Header: FC<Props> = ({ isDarkMode, handleDarkMode }: Props) => {
   return (
     <Wrapper>
-      <div className='left'>
+      <div className="left">
         <BlogLogoContainer>
-          <img src={sudal} alt='Blog Logo' />
+          <img src={sudal} alt="Blog Logo" />
         </BlogLogoContainer>
         <Nav>
-          <Link to={'/'}>Home</Link>
-          <Link to={'/tech'}>Tech</Link>
-          <Link to={'/career'}>Career</Link>
+          <Link to={"/"}>Home</Link>
+          <Link to={"/tech"}>Tech</Link>
+          <Link to={"/career"}>Career</Link>
         </Nav>
       </div>
-      <div className='right'>
+      <div className="right">
         <OptionContainer>
           <OptionButton>
-            <Search className='header-icon' />
+            <Search className="header-icon" />
           </OptionButton>
           <OptionButton onClick={() => handleDarkMode(!isDarkMode)}>
-            {isDarkMode
-              ? <NightsStayRounded className='header-icon' />
-              : <WbSunnyRounded className='header-icon' />
-            }
+            {isDarkMode ? (
+              <NightsStayRounded className="header-icon" />
+            ) : (
+              <WbSunnyRounded className="header-icon" />
+            )}
           </OptionButton>
           <OptionButton>
-            <RssFeedRounded className='header-icon' />
+            <RssFeedRounded className="header-icon" />
           </OptionButton>
         </OptionContainer>
-        <MenuRounded className='header-icon' fontSize='large' />
+        <MobileMenuWrapper>
+          <MenuRounded className="header-icon" fontSize="large" />
+        </MobileMenuWrapper>
       </div>
     </Wrapper>
   );
@@ -90,6 +99,10 @@ const Nav = styled.div`
     margin-left: 1rem;
     color: ${(p) => p.theme.color.writing};
   }
+
+  ${(p) => p.theme.media.mobile`
+    display: none;
+  `};
 `;
 const OptionContainer = styled.div`
   display: flex;
@@ -102,4 +115,11 @@ const OptionButton = styled.div`
   margin-left: 1rem;
   width: ${(p) => `${p.theme.size.navOptionBtn}px`};
   height: ${(p) => `${p.theme.size.navOptionBtn}px`};
+`;
+const MobileMenuWrapper = styled.div`
+  display: none;
+
+  ${(p) => p.theme.media.mobile`
+    display: inline;
+  `};
 `;

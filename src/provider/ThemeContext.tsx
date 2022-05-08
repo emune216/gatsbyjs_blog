@@ -1,4 +1,4 @@
-import React from 'react';
+import { createContext } from "react";
 
 interface ThemeContext {
   isDarkMode: boolean;
@@ -7,9 +7,9 @@ interface ThemeContext {
 
 const initialState: ThemeContext = {
   isDarkMode: false,
-  handleDarkMode: () => {},
+  handleDarkMode: () => null,
 };
 
-const DarkThemeContext = React.createContext<ThemeContext>(initialState);
+const DarkThemeContext = createContext<ThemeContext>(initialState);
 
 export default DarkThemeContext;

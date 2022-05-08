@@ -1,14 +1,19 @@
-import { useContext, useLayoutEffect} from 'react';
+import { useContext, useLayoutEffect } from "react";
 
-import DarkModeContext from '../provider/ThemeContext';
+import DarkModeContext from "../provider/ThemeContext";
 
-const useDarkMode = () => {
+const useDarkMode: () => {
+  isDarkMode: boolean;
+  handleDarkMode: (val: boolean) => void;
+} = () => {
   const { isDarkMode, handleDarkMode } = useContext(DarkModeContext);
 
   useLayoutEffect(() => {
-    if (!localStorage.getItem('prefers-darkmode')) return;
+    if (!localStorage.getItem("prefers-darkmode")) return;
 
-    const prefersDarkMode: boolean = JSON.parse(localStorage.getItem('prefers-darkmode') as string);
+    const prefersDarkMode: boolean = JSON.parse(
+      localStorage.getItem("prefers-darkmode") as string
+    );
 
     if (prefersDarkMode && !isDarkMode) handleDarkMode(true);
     if (!prefersDarkMode && isDarkMode) handleDarkMode(false);

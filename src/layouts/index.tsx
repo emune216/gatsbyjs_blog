@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
-import useDarkMode from '../hooks/useDarkMode';
-import useScroll from '../hooks/useScroll';
-import Header from './Header';
-import Footer from './Footer';
-import MaxWidthWrapper from '../components/MaxWidthWrapper';
+import useDarkMode from "../hooks/useDarkMode";
+import useScroll from "../hooks/useScroll";
+import Header from "./Header";
+import Footer from "./Footer";
+import MaxWidthWrapper from "../components/MaxWidthWrapper";
 
 const Layout: FC = ({ children }) => {
   const { isDarkMode, handleDarkMode } = useDarkMode();
@@ -14,17 +14,12 @@ const Layout: FC = ({ children }) => {
   return (
     <App>
       <EmptySpace />
-      <StickyContainer className={scrollY > 0 ? 'active-shadow' : ''}>
-        <Header
-          isDarkMode={isDarkMode}
-          handleDarkMode={handleDarkMode}
-        />
+      <StickyContainer className={scrollY > 0 ? "active-shadow" : ""}>
+        <Header isDarkMode={isDarkMode} handleDarkMode={handleDarkMode} />
       </StickyContainer>
       <MaxWidthWrapper>
         <Main>
-          <MainContent>
-            {children}
-          </MainContent>
+          <MainContent>{children}</MainContent>
         </Main>
       </MaxWidthWrapper>
       <Footer />
@@ -45,7 +40,8 @@ const App = styled.div`
   transition: ${(p) => `all ${p.theme.transition.default}`};
 
   .active-shadow {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
 `;
 const EmptySpace = styled.div`

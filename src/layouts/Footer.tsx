@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Facebook, Instagram } from '@mui/icons-material';
+import React, { FC } from "react";
+import styled from "styled-components";
+import { Facebook, Instagram } from "@mui/icons-material";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <Wrapper>
       <FooterContainer>

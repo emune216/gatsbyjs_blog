@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
 interface Props {
   title: string;
   desc: string;
 }
 
-const ArticlePreview = ({ title, desc }: Props) => {
+const ArticlePreview: FC<Props> = ({ title, desc }: Props) => {
   return (
     <Wrapper>
       <Title>{title}</Title>
