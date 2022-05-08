@@ -12,11 +12,12 @@ import {
 import sudal from "../assets/image/sudal.png";
 
 interface Props {
+  title: string;
   isDarkMode: boolean;
   handleDarkMode: (val: boolean) => void;
 }
 
-const Header: FC<Props> = ({ isDarkMode, handleDarkMode }: Props) => {
+const Header: FC<Props> = ({ title, isDarkMode, handleDarkMode }: Props) => {
   return (
     <Wrapper>
       <div className="left">
@@ -28,6 +29,9 @@ const Header: FC<Props> = ({ isDarkMode, handleDarkMode }: Props) => {
           <Link to={"/tech"}>Tech</Link>
           <Link to={"/career"}>Career</Link>
         </Nav>
+      </div>
+      <div className="center">
+        <span>{title}</span>
       </div>
       <div className="right">
         <OptionContainer>
@@ -58,6 +62,7 @@ export default Header;
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 1rem 2rem;
 
@@ -67,6 +72,17 @@ const Wrapper = styled.div`
   .left {
     display: flex;
     align-items: center;
+  }
+  .center {
+    display: none;
+    > span {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    ${(p) => p.theme.media.mobile`
+      display: inline;
+    `};
   }
   .right {
     display: flex;
@@ -107,6 +123,10 @@ const Nav = styled.div`
 const OptionContainer = styled.div`
   display: flex;
   align-items: center;
+
+  ${(p) => p.theme.media.mobile`
+    display: none;
+  `};
 `;
 const OptionButton = styled.div`
   display: flex;
